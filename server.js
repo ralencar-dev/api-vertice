@@ -16,5 +16,9 @@ app.get('/api/products', WarehouseController.listProducts);
 app.post('/api/movements/out', WarehouseController.performPicking);
 app.get('/api/dashboard', WarehouseController.getDashboardStats);
 
-const PORT = 3000;
-app.listen(PORT, () => console.log(`Servidor de Luxo rodando na porta ${PORT}`));
+// No final do seu server.js
+const PORT = process.env.PORT || 3000; 
+
+app.listen(PORT, () => {
+    console.log(`Vértice rodando na porta ${PORT}`);
+});
